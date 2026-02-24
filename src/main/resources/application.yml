@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: learning
+
+  profiles:
+    active: ollama #openai
+
+server:
+  port: 8080
+
+logging:
+  level:
+    '[com.ai.learning]': DEBUG 
