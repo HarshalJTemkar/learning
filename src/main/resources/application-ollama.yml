@@ -1,0 +1,17 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama-3.2-3b-it
+        options:
+          temperature: 0.7
+    openai:
+      api-key: "disabled"   # FIX: prevents OpenAI auto-config from failing when ollama profile is active
+      chat:
+        options:
+          model: gpt-4o-mini
+  #autoconfigure:
+    #exclude:
+      #- org.springframework.ai.autoconfigure.openai.OpenAiAutoConfiguration
+#Both model are used as you have configured both in POM, if not used it will through exception, so you have to exclude the one which you are not using, for example if you are using openai then you have to exclude ollama and vice versa.
