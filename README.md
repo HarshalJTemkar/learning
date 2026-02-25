@@ -1,4 +1,5 @@
 Simple AI connection
+
 Client → Controller → ChatService → GUARDRAIL → AI API
 
 How it all fits together
